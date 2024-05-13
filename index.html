@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Da Kitty Warrior - Journal of a Mourning Mother</title>
+    <title>Da Kitty Warrior Project</title>
     <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/style.css">
     
 </head>
 <body>
     <header>
         <br>
         <h1>I love my son William 💟</h1>
+        <p class="builtby-text">Built by <a href="https://www.adamhn.com">Adam H.</a> Source code available on <a href="https://github.com/adamhn/journal-js">GitHub</a></p>
+            <nav></nav>
     </header>
     <nav>
 
     </nav>
-    <main>
+    <main class="main-container">
+        <h2 class="title">My Journal</h2>
 
+        <section class="input-section">
+            <form id="entry-form">
+                <input type="text" class="entry-title" placeholder="Give your entry a title..." >
+                <textarea class="entry-textbox" placeholder="Start clearing out your head..." ></textarea>
+                <br>
+                <button type="submit" class="primary-button right">Submit</button>
+            </form>
+        </section>
+
+        <section id="entries-section">
+            <h2 class="entries-title">Entires <span class="date-updated">Last updated: </span></h2>
+            <div class="entries-list"></div>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
