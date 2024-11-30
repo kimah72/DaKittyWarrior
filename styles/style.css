@@ -1,26 +1,3 @@
-/* Style Guidelines
-
-:::::Colors:::::
-Primary Green-like: #006d77
-Light Gray: ##FAFAFA
-Gray: #eeeeee
-Dark: #393e46
-Black: #222831
-
-:::::Available Weights:::::
-Montserrat:
-Light 300
-Regular 400
-Medium 500
-Bold 700
-
-Open Sans:
-Light 300
-Regular 400
-*/
-
-/* Initial Setup  
------------------------------------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -29,63 +6,102 @@ Regular 400
   }
   
   body {
-    font-family: "Montserrat", "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 100%;
-    background-color: #fff;
-    color: #222831;
+    font-family: 'Raleway', sans-serif;
+    color: var(--baby-powder);
+    background-color: var(--oxford-blue);
   }
   
-  textarea:focus,
-  input:focus,
-  button:focus {
-    outline: none;
+  :root {
+    --oxford-blue: #11112dff;
+    --penn-blue: #111f59ff;
+    --baby-powder: #fefffbff;
+    --mauveine: #9320acff;
+    --argentinian-blue: #6ca0dcff;
   }
-  
-  /* Headings */
-  h1 {
-    font-size: 300%;
-  }
-  
-  .title {
-    color: #006d77;
-    text-align: center;
-  }
-  
-  .single-entry.title {
-    text-align: left;
-    color: #fff;
-  }
-  
-  /* Paragraphs */
-  .builtby-text {
-    text-align: center;
-    margin-top: 20px;
-    color: #a9a9a9;
-  }
-  
-  /* Links */
-  a,
-  a:visited {
-    color: #a9a9a9;
-    text-decoration: none;
-    border-bottom: 1px solid #a9a9a9;
-  }
-  
-  a:hover {
-    border-bottom: 1px solid #006d77;
-    color: #006d77;
-  }
-  
-  /* Header
-  -----------------------------------------------------------------------------*/
-  
-  /* Footer
-  -----------------------------------------------------------------------------*/
-  
-  /* Main
-  -----------------------------------------------------------------------------*/
-  .main-container {
+
+  /* Container */
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Side Navigation */
+.side-nav {
+  grid-row: 1 / 4;
+  background-color: var(--penn-blue);
+  color: var(--baby-powder);
+  padding: 20px;
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  margin-bottom: 10px;
+}
+
+.side-nav a {
+  color: var(--baby-powder);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+/* Header */
+.header {
+  grid-column: 2 / 3;
+  background-color: var(--argentinian-blue);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: var(--oxford-blue);
+}
+/* Footer */
+.footer {
+  grid-column: 2 / 3;
+  background-color: var(--argentinian-blue);
+  padding: 20px;
+  text-align: center;
+  color: var(--baby-powder);
+}
+
+/* Main Content */
+.main {
+  grid-column: 2 / 3;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.box {
+  background-color: var(--mauveine);
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--baby-powder);
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5em;
+}
+
+/* Special grid items */
+.box.large {
+  grid-column: span 2;
+}
+
+.box.wide {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* this goes with the journal - need to fix */
+.main-container {
     margin: 5% auto;
     width: 80%;
     max-width: 650px;
