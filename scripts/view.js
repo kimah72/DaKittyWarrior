@@ -1,9 +1,23 @@
 // this affects the DOM for the journal
 import { getEntries, deleteAtIndex } from './dataModel.js';
 
+function toggleDeleteButtons(visible = true) {
+    const deleteButtons = document.querySelectorAll('.delete-entry-button');
+    deleteButtons.forEach(button => button.style.display = visible ? 'inline-block' : 'none');
+}
+
+function toggleEntryVisibility(titleEl, textEl) {
+    const isVisible = titleEl.style.display === 'block';
+    titleEl.style.display = isVisible ? 'none' : 'block';
+    textEl.style.display = isVisible ? 'none' : 'block';
+    if (isVisible) {
+        hideAllEntries();
+    }
+}
+
 export function updateEntries() {
     const entriesList = document.querySelector(".entries-list");
-    entriesList.innerHTML = "";
+    entriesList.innerHTML = ""; // Clear the list before updating
 
     getEntries().forEach((entry, index) => {
         const displayEntryBtn = createButton('display-entry-button', entry.entryDate);
@@ -13,15 +27,33 @@ export function updateEntries() {
 
         [displayEntryBtn, deleteEntryBtn, titleEl, textEl].forEach(el => entriesList.appendChild(el));
 
-        displayEntryBtn.addEventListener("click", () => {
-            hideAllEntries();
-            showElement(titleEl, textEl);
+        displayEntryBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleEntryVisibility(titleEl, textEl);
         });
 
-        deleteEntryBtn.addEventListener("click", () => deleteAtIndex(index, updateEntries));
+        [titleEl, textEl].forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.stopPropagation();
+                toggleEntryVisibility(titleEl, textEl);
+            });
+        });
+        
+        deleteEntryBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            deleteAtIndex(index, updateEntries);
+        });
     });
+
+    toggleDeleteButtons(false);
 }
 
+export function showDeleteButtons() {
+    toggleDeleteButtons(true);
+}
+export function hideDeleteButtons() {
+    toggleDeleteButtons(false);
+}
 export function clearInputFields() {
     document.querySelector(".entry-title").value = "";
     document.querySelector(".entry-textbox").value = "";
@@ -42,13 +74,10 @@ function createElement(tag, className, text) {
     return element;
 }
 
-function hideAllEntries() {
+function hideAllEntries(except) {
     document.querySelectorAll(".single-entry").forEach(element => {
-        element.style.display = "none";
+        if (element !== except && element.style.display === "block") {
+            element.style.display = "none";
+        }
     });
-}
-
-function showElement(titleEl, textEl) {
-    titleEl.style.display = "block";
-    textEl.style.display = "block";
 }

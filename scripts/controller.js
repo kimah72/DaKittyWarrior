@@ -1,11 +1,12 @@
 // logic flow that is the base application for the journal
-import { addNewEntry, readData } from './dataModel.js';
-import { updateEntries, clearInputFields } from './view.js';
+import { addNewEntry, readData, } from './dataModel.js';
+import { updateEntries, clearInputFields, showDeleteButtons, hideDeleteButtons } from './view.js';
 
 export function init() {
     readData();
     updateEntries();
     setupEventListeners();
+    setupToggleDeleteButton();
 }
 
 function setupEventListeners() {
@@ -18,6 +19,21 @@ function onEntrySubmit(event) {
     const title = document.querySelector(".entry-title").value;
     const description = document.querySelector(".entry-textbox").value;
     
-    addNewEntry(title, description, updateEntries); // Pass updateEntries here
+    addNewEntry(title, description, updateEntries);
     clearInputFields();
+}
+function setupToggleDeleteButton() {
+    const toggleBtn = document.getElementById('toggleDeleteBtn');
+    let deleteButtonsVisible = false;
+
+    toggleBtn.addEventListener('click', () => {
+        deleteButtonsVisible = !deleteButtonsVisible;
+        if (deleteButtonsVisible) {
+            showDeleteButtons();
+            toggleBtn.textContent = 'Turn OFF Delete';
+        } else {
+            hideDeleteButtons();
+            toggleBtn.textContent = 'Turn ON Delete';
+        }
+    });
 }

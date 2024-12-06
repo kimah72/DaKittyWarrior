@@ -2,11 +2,15 @@
 let entries = [];
 
 export function readData() {
-    let parsedEntries = JSON.parse(localStorage.getItem("entries"));
-    if (parsedEntries) {
-        entries = parsedEntries;
+    entries = [];
+    let index = 0;
+    
+    while (true) {
+        let entry = localStorage.getItem(`entry-${index}`);
+        if (entry === null) break;
+        entries.push(JSON.parse(entry));
+        index++;
     }
-    return entries;
 }
 
 export function saveData() {
