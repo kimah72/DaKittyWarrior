@@ -2,16 +2,25 @@
 let entries = [];
 
 export function readData() {
-    entries = [];
-    let index = 0;
-    
-    while (true) {
-        let entry = localStorage.getItem(`entry-${index}`);
-        if (entry === null) break;
-        entries.push(JSON.parse(entry));
-        index++;
+    let parsedEntries = JSON.parse(localStorage.getItem("entries"));
+    if (parsedEntries) {
+        entries = parsedEntries;
     }
+    return entries;
 }
+
+// only lose if data gets erased from Local Storage and trying to retrieve from the value pairs
+// export function readData() {
+//     entries = [];
+//     let index = 0;
+    
+//     while (true) {
+//         let entry = localStorage.getItem(`entry-${index}`);
+//         if (entry === null) break;
+//         entries.push(JSON.parse(entry));
+//         index++;
+//     }
+// }
 
 export function saveData() {
     localStorage.setItem("entries", JSON.stringify(entries));

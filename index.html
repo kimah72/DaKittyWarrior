@@ -4,50 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Da Kitty Warrior Project</title>
+    <meta name="author" content="Kimberly Miner">
+    <meta name="description" content="Da Kitty Warrior Project - In Memory of William A. Horlacher">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Faster+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="images/favicon.ico">
     
 </head>
 <body>
-    <div class="container">
-        <nav class="side-nav">
-            <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <header class="header">
+    <header class="header">
+        <a id="logo_link" href="https:/kimah72.github.io/DaKittyWarrior/">
             <img class="logo" src="images/dakitty.png" alt="dakittywarrior">
-            <img class="banner" src="images/Heading.png" alt="william">
-        </header>
-        <nav>
-
-        </nav>
-        <main class="main-container">
-            <h2 class="title">My Journal</h2>
-
-            <section class="input-section">
-                <form id="entry-form">
-                    <input type="text" class="entry-title" placeholder="Give your entry a title..." >
-                    <textarea class="entry-textbox" placeholder="Start clearing out your head..." ></textarea>
-                    <br>
-                    <button type="submit" class="primary-button right">Submit</button>
-                    <button id="toggleDeleteBtn" type="button" class="primary-button left">Turn ON Delete</button>
-            </form>
-            </section>
-
-            <section id="entries-section">
-                <h2 class="entries-title">Entires <span class="date-updated">Last updated: </span></h2>
-                <div class="entries-list"></div>
-            </section>
-        </main>
-        <footer class="footer">Footer</footer>
-        <script type="module" src="scripts/main.js"></script>
+        </a>
+            <div class="header-titles">
+            <h1>William Adam Horlacher</h1>
+            <h2>October 13, 2021 - February 7, 2024</h2>
+        </div>
+        <div class="switch-container">
+            <div class="switch-container">
+                <label class="dark-mode-label" for="dark-mode-toggle">✔</label>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+    <nav>
+    <div class="navbar">
+        <span class="hamburger">☰</span>
+        <a class="active" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
     </div>
+    </nav>
+    <main class="main-container">
+        <section class="journal">
+        <h2 class="title">My Journal</h2>
+        <section class="input-section">
+            <form id="entry-form">
+                <input type="text" class="entry-title" placeholder="Give your entry a title..." >
+                <textarea class="entry-textbox" placeholder="Start clearing out your head..." ></textarea>
+                <button type="submit" class="primary-button">Submit</button>
+            </form>
+        </section>
+        <section id="entries-section">
+            <h2 class="entries-title">Entires <span class="date-updated">Last updated: </span></h2>
+            <div class="entries-list"></div>
+            <button id="toggleDeleteBtn" type="button" class="primary-button">Turn ON Delete</button>
+        </section>
+        </section>
+        <section class="cardholder">
+            hello
+            <section class="card1">
+                hello
+            </section>
+            <section class="card3">
+                hello
+            </section>
+        </section>
+    </main>
+    <footer class="footer">Footer</footer>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

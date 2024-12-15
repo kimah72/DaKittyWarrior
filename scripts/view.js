@@ -17,7 +17,7 @@ function toggleEntryVisibility(titleEl, textEl) {
 
 export function updateEntries() {
     const entriesList = document.querySelector(".entries-list");
-    entriesList.innerHTML = ""; // Clear the list before updating
+    entriesList.innerHTML = "";
 
     getEntries().forEach((entry, index) => {
         const displayEntryBtn = createButton('display-entry-button', entry.entryDate);

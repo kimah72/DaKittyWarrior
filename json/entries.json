@@ -1,0 +1,27 @@
+[
+  {
+    "entryTitle": "Actually this may work...",
+    "entryDescription": "I would have to move only source code locally while uploading the results of the entry. Rudimentary at best but I think it can work?",
+    "entryDate": "5/13/2024, 4:53:58 PM"
+  },
+  {
+    "entryTitle": "Let's give this a new look",
+    "entryDescription": "I'm going to keep working on the website I have planned and keep writing.\n\nShouldn't take much to pull a site together. I'll use this in the meantime to log what I do.",
+    "entryDate": "5/13/2024, 5:58:44 PM"
+  },
+  {
+    "entryTitle": "And so it begins...",
+    "entryDescription": "Today, I've worked on the color palettes, the fonts, the wireframe for the layout, and created AI generated images.\n\nAs far as how I'm doing while creating this. I'm letting him help me. So far, I've changed the color scheme, and he approves of the cool graphic that was made. We both had a \"that's the one\" moment. I need to change some of the fonts and positioning but It's coming along.\n\nA year ago, he came to my house for Thanksgiving, and he was not doing ok. I could tell. I asked but he wouldn't answer. I remember looking at him from across the room and he was staring off in front of him and I keep replaying this scene. What was going through his mind? I didn't do enough to reach out and it haunts me. I should have done more. It would be one of the last three times that he would be around me. I got to hug him, kiss him, and tell him I loved him.",
+    "entryDate": "11/29/2024, 8:39:20 PM"
+  },
+  {
+    "entryTitle": "journal is set",
+    "entryDescription": "I've created a modular journal for ease of function. One controls the DOM, one controls the flow of logic and the last controls the storage. The only thing it does on the main.js is kick off the application.",
+    "entryDate": "11/29/2024, 9:03:05 PM"
+  },
+  {
+    "entryTitle": "Testing JSON",
+    "entryDescription": "Does this work?",
+    "entryDate": "12/5/2024, 5:11:03 PM"
+  }
+]

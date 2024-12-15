@@ -1,0 +1,107 @@
+[{entryTitle: "Actually this may work...",…}, {entryTitle: "Let's give this a new look",…},…]
+0
+: 
+{entryTitle: "Actually this may work...",…}
+entryDate
+: 
+"5/13/2024, 4:53:58 PM"
+entryDescription
+: 
+"I would have to move only source code locally while uploading the results of the entry. Rudimentary at best but I think it can work?"
+entryTitle
+: 
+"Actually this may work..."
+1
+: 
+{entryTitle: "Let's give this a new look",…}
+entryDate
+: 
+"5/13/2024, 5:58:44 PM"
+entryDescription
+: 
+"I'm going to keep working on the website I have planned and keep writing. Shouldn't take much to pull a site together. I'll use this in the meantime to log what I do."
+entryTitle
+: 
+"Let's give this a new look"
+2
+: 
+{entryTitle: "And so it begins...",…}
+entryDate
+: 
+"11/29/2024, 8:39:20 PM"
+entryDescription
+: 
+"Today, I've worked on the color palettes, the fonts, the wireframe for the layout, and created AI generated images. As far as how I'm doing while creating this. I'm letting him help me. So far, I've changed the color scheme, and he approves of the cool graphic that was made. We both had a 'that's the one' moment. I need to change some of the fonts and positioning but It's coming along. A year ago, he came to my house for Thanksgiving, and he was not doing ok. I could tell. I asked but he wouldn't answer. I remember looking at him from across the room and he was staring off in front of him and I keep replaying this scene. What was going through his mind? I didn't do enough to reach out and it haunts me. I should have done more. It would be one of the last three times that he would be around me. I got to hug him, kiss him, and tell him I loved him."
+entryTitle
+: 
+"And so it begins..."
+3
+: 
+{entryTitle: "journal is set",…}
+entryDate
+: 
+"11/29/2024, 9:03:05 PM"
+entryDescription
+: 
+"I've created a modular journal for ease of function. One controls the DOM, one controls the flow of logic and the last controls the storage. The only thing it does on the main.js is kick off the application."
+entryTitle
+: 
+"journal is set"
+4
+: 
+{entryTitle: "Testing JSON", entryDescription: "Does this work?", entryDate: "12/5/2024, 5:11:03 PM"}
+entryDate
+: 
+"12/5/2024, 5:11:03 PM"
+entryDescription
+: 
+"Does this work?"
+entryTitle
+: 
+"Testing JSON"
+5
+: 
+{entryTitle: "did this not save?", entryDescription: "oh great... not again.",…}
+entryDate
+: 
+"12/7/2024, 5:33:32 PM"
+entryDescription
+: 
+"oh great... not again."
+entryTitle
+: 
+"did this not save?"
+6
+: 
+{entryTitle: "Why does CSS take so long!",…}
+entryDate
+: 
+"12/7/2024, 6:41:38 PM"
+entryDescription
+: 
+"I've been working on CSS for at least 3 hours and it is such a pain! I think I finally got the 1st column in the main container situated. Now it's time to add elements."
+entryTitle
+: 
+"Why does CSS take so long!"
+7
+: 
+{entryTitle: "I think some entries have erased",…}
+entryDate
+: 
+"12/7/2024, 10:43:23 PM"
+entryDescription
+: 
+"I thought I did more documentation of what I had done this week. I have a favicon and a delete button toggle, so entries don't get accidentally deleted. I worked for hours trying to get the journal to look nice, changed the whole layout from a side nav bar to a nav bar that is above the main layout. Trying to line up all the elements just sucks the hours away and now it is time for bed. I'm sad another entry didn't stay. I don't know what happened. It was about William. I hope next week brings more succes."
+entryTitle
+: 
+"I think some entries have erased"
+{entryTitle: "Set backs",…}
+entryDate
+: 
+"12/14/2024, 10:23:27 PM"
+entryDescription
+: 
+"I had some set-backs this week as I tried to implement more stuff. Journal entries have deleted, and I'm concerned that I'll lose them. I saved them from the Local Storage as a text file so I can restore them later. I hope I can fix it. "
+entryTitle
+: 
+"Set backs"
